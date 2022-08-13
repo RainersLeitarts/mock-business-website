@@ -27,7 +27,7 @@ const Automotive = () => {
             <p className={styles.text}>Our inovative city logistics project focused on smart vehicles. Check out our progress, achievements and roadmap in on our socials.</p>
             <div className={styles.socialsContainer}>
                 <a style={{backgroundImage: `url(${ig_dark.src})`}} href='https://www.instagram.com' target={'_blank'} rel="noreferrer" className={styles.socialsIcon}/>
-                <a style={{backgroundImage: `url(${yt_dark.src})`}} href='https://www.youtube.com' target={'_blank'} className={styles.socialsIcon}/>
+                <a style={{backgroundImage: `url(${yt_dark.src})`}} href='https://www.youtube.com' target={'_blank'} rel="noreferrer" className={styles.socialsIcon}/>
                 <a style={{backgroundImage: `url(${fb_dark.src})`}} href='https://www.facebook.com' target={'_blank'} rel="noreferrer" className={styles.socialsIcon}/>
             </div>
         </div>
