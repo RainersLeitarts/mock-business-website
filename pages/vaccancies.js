@@ -78,7 +78,7 @@ const VaccanciesPage = () => {
                         <li className={styles.cardPoint}>Your Full Name</li>
                         <li className={styles.cardPoint}>Contact information</li>
                         <li className={styles.cardPoint}>Introductionary text about You and Your skills</li>
-                        <li className={styles.cardPoint}>"Portfolio [Optional]"</li>
+                        <li className={styles.cardPoint}>"Portfolio /[Optional/]"</li>
                     </ul>
                 </div>
             </div>
