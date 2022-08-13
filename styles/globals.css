@@ -1,0 +1,23 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background-color: var(--primary);
+  overflow-x: hidden;
+}
+
+:root{
+  --primary: #121e2c;
+  --secondary: #0e1721;
+  --primary_bright: #0a96d3;
+  --dark: #08121c;
+  --red: red;
+  --nav_height: 80px;
+}
+
+* {
+  box-sizing: border-box;
+  z-index: 1;
+}

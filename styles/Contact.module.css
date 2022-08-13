@@ -1,0 +1,90 @@
+.contactContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin-bottom: 50px;
+}
+
+.contactContentContainer{
+    max-width: 700px;
+    width: 100%;
+}
+
+.title{
+    font-size: 72px;
+    text-align: center;
+    margin-top: 70px;
+    margin-bottom: 25px;
+}
+
+.formTop{
+    width: 100%;
+    display: flex;
+    gap: 5px;
+}
+
+.input{
+    height: 40px;
+    font-size: 18px;
+    background-color: rgba(8, 18, 28, 0.3);
+    border: 3px solid var(--dark);
+    color: white;
+    padding: 0 5px;
+    width: 100%;
+    margin-top: 5px;
+}
+
+.input:focus{
+    outline: 2px solid var(--primary_bright);
+}
+
+.textarea{
+    resize: none;
+    height: 280px;
+}
+
+.formTop > .input{
+    width: 50%;
+}
+
+.buttonContainer{
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.button{
+    color: white;
+    font-size: 18px;
+    width: 170px;
+    cursor: pointer;
+    height: 40px;
+    border: 0;
+    background-color: var(--primary_bright);
+    transition: all 0.3s;
+}
+
+.button:hover{
+    transform: scale(1.05);
+}
+
+.sendMessage{
+    text-align: center;
+}
+
+.success{
+    color: var(--primary_bright);
+}
+
+.error{
+    color: #ff0033;
+}
+
+@media screen and (max-width: 500px){
+    .title{
+        font-size: 42px;
+    }
+}

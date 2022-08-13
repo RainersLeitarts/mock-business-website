@@ -1,0 +1,112 @@
+.vaccanciesWrapper{
+    width: 100%;
+    height: calc(100vh - var(--nav_height));
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.infoContainer{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.image{
+    width: 50%;
+    max-height: 80%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.offer{
+    display: flex;
+    flex-direction: column;
+}
+
+.list{
+    padding-left: 15px;
+    color: white;
+    margin-bottom: 50px;
+}
+
+.title{
+    font-size: 72px;
+    color: white;
+    margin: 0;
+    
+}
+
+.smallTitle{
+    font-size: 24px;
+    color: white;
+    margin-bottom: 0;
+}
+
+.button{
+    max-width: 200px;
+    height: 50px;
+    padding: 0 20px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 0;
+    border: none;
+    background-color: var(--primary_bright);
+    transition: all 0.3s;
+    color: white;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.button:hover{
+    transform: scale(1.1);
+}
+
+@media screen and (max-width: 772px){
+    .vaccanciesWrapper{
+        height: auto;
+        flex-direction: column;
+        
+    }
+
+    .infoContainer{
+        width: 70%;
+    }
+
+    .image{
+        display: none;
+    }
+
+    .button{
+        max-width: 100%;
+    }
+
+    .title{
+        font-size: 64px;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .infoContainer{
+        width: 90%;
+    }
+
+    .title{
+        font-size: 42px;
+        margin-bottom: 0;
+    }
+
+    .smallTitle{
+        margin-top: 20px;
+        font-size: 22px;
+    }
+}

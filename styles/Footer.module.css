@@ -1,0 +1,46 @@
+.footerContainer{
+    width: 100%;
+    background-color: var(--dark);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.footerContentContainer{
+    height: 100%;
+    max-width: 1300px;
+    width: 100%;
+    display: flex;
+    color: white;
+    gap: 30px;
+    justify-content: space-between;
+    margin: 40px 0;
+    padding: 0 20px;
+    flex-wrap: wrap;
+}
+
+.sectionTitle{
+    margin-top: 0;
+    margin-bottom: 13px;
+}
+
+.sectionText{
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.logo{
+    height: 90px;
+    align-self: center;
+    aspect-ratio: 1.1/1;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.rewodev{
+    color: var(--primary_bright);
+    text-decoration: none;
+}

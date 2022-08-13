@@ -1,0 +1,143 @@
+.homeContainer{
+  width: 100%;
+  height: calc(100vh + 200px) ;
+  background-color: var(--primary);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-attachment: fixed;
+  position: relative;
+  padding-bottom: 200px;
+}
+
+.svg{
+  position: absolute;
+  bottom: 0;
+}
+
+.spacerContainer{
+  position: absolute;
+  transform: translate(calc(-0.5 * calc(100vw - 1360px)));
+}
+
+.homeContainer::before{
+  content: '';
+  position: absolute;
+  inset: 0 0 0 0;
+  background-color: var(--dark);
+  opacity: 0.5;
+}
+
+.homeContentContainer{
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 20px;
+  gap: 20px;
+}
+
+.titleContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.title{
+  font-size: 120px;
+  margin: 0;
+  padding: 0;
+}
+
+.link{
+  width: 50%;
+  background-color: var(--primary_bright);
+  max-width: 300px;
+  width: 100%;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  position: relative;
+  transition: all 0.2s;
+  box-shadow: rgba(10, 150, 211, 0.4) 0px 5px, rgba(10, 150, 211, 0.3) 0px 10px, rgba(10, 150, 211, 0.2) 0px 15px, rgba(10, 150, 211, 0.1) 0px 20px, rgba(10, 150, 211, 0.05) 0px 25px;
+}
+
+.link:hover{
+  box-shadow: rgba(10, 150, 211, 0.4) 0px 7px, rgba(10, 150, 211, 0.3) 0px 13px, rgba(10, 150, 211, 0.2) 0px 19px, rgba(10, 150, 211, 0.1) 0px 25px, rgba(10, 150, 211, 0.05) 0px 31px;
+}
+
+.link::after{
+  content: '';
+  position: absolute;
+  inset: 0 0 0 0;
+  transition: all 0.3s;
+  opacity: 0.6;
+}
+
+.link:hover.link::after{
+  background-color: white;
+  opacity: 0.1;
+}
+
+.buttonsContainer{
+  display: flex;
+  max-width: 300px;
+  width: 80%;
+  justify-content: space-around;
+  align-items: flex-start;
+  text-align: center;
+  gap: 20px;
+}
+
+.homeImage{
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-width: 400px;
+  width: 60%;
+  aspect-ratio: 1.1/1;
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 772px){
+
+}
+
+@media screen and (max-width: 500px){
+  .title{
+    font-size: 64px;
+  }
+
+  .homeContainer{
+    background-attachment: scroll;
+  }
+
+  .buttonsContainer{
+    flex-direction: column;
+    width: 60%;
+    gap: 20px;
+  }
+
+  .link{
+    padding: 13px;
+
+  }
+}
+
+@media screen and (max-height: 500px){
+  .homeContainer{
+    padding-top: 80px;
+  }
+
+  .homeImage{
+    max-width: 200px;
+  }
+}

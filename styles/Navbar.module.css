@@ -1,0 +1,142 @@
+.navContainer{
+    width: 100%;
+    height: var(--nav_height);
+    background-color: var(--dark);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    position: fixed;
+    z-index: 10000;
+}
+
+.navContentContainer{
+    max-width: 1300px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logoContainer{
+    height: 50px;
+    width: 50px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+}
+
+.linksContainer{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.link{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+    position: relative;
+    padding: 3px 0;
+}
+
+.link::before{
+    content: '';
+    position: absolute;
+    height: 3px;
+
+    width: 0%;
+    bottom: 0;
+    background-color: var(--primary_bright);
+    transition: all 0.3s;
+}
+
+.link.active.link::before{
+    width: 100%;
+}
+
+.mobileNavButton{
+    width: 35px;
+    aspect-ratio: 1/1;
+    background-color: var(--primary_bright);
+    cursor: pointer;
+    display: none;
+}
+
+.hamburgerContainer{
+    display: none;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.hamburger{
+    display: none;
+    width: 30px;
+    height: 4px;
+    background: white;
+    border-radius: 3px;
+    transition: all 0.5s ease-in-out;
+    transform: translateX(0);
+}
+
+.hamburger.open{
+    transform: translateX(-30px); 
+    background: transparent;
+}
+
+.hamburger::before, .hamburger::after{
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 4px;
+    background: white;
+    border-radius: 3px;
+    transition: all 0.5s ease-in-out;
+}
+
+.hamburger::before{
+    background: white;
+    transform: translateY(-11px);
+}
+
+.hamburger.open::before{
+    transform: rotate(45deg) translate(21px, -21px); 
+    background-color: white;
+}
+
+
+.hamburger::after{
+    background: white;
+    transform: translateY(11px);
+}
+
+.hamburger.open::after{
+    transform: rotate(-45deg) translate(21px, 21px); 
+    background-color: white;
+}
+
+
+
+@media screen and (max-width: 772px){
+    .linksContainer{
+        display: none;
+    }
+
+    .hamburgerContainer{
+        display: flex;
+    }
+
+    .hamburger{
+        display: block;
+    }
+    
+}

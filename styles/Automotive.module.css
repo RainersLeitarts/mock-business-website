@@ -1,0 +1,131 @@
+.automotiveContainer{
+    width: 100%;
+    height: calc(100vh - var(--nav_height));;
+    display: flex;
+    gap: 20px;
+    padding: 20px 0;
+    position: relative;
+}
+
+.automotiveContainer::before{
+    content: '';
+    position: absolute;
+    width: 100vw;
+    top: 0;
+    bottom: 0;
+    background-color: var(--secondary);
+    z-index: 0;
+    transform: translate(calc(-0.5 * calc(100vw - 1360px)));
+}
+
+.imagesContainer{
+    width: 50%;
+    height: 100%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 5px;
+}
+
+.infoContainer{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.imageContainer{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all 0.3s;
+}
+
+.imageContainer:hover{
+    z-index: 100;
+}
+
+.kmLogo{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 80px;
+    height: 80px;
+}
+
+.title{
+    color: white;
+    text-align: center;
+}
+
+.text{
+    color: white;
+    text-align: center;
+    font-size: 16px;
+}
+
+.socialsContainer{
+    display: flex;
+    max-width: 120px;
+    width: 100%;
+    height: 25px;
+    justify-content: space-evenly;
+}
+
+.socialsIcon{
+    margin-top: 20px;
+    height: 100%;
+    width: 25px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.7;
+    transition: all 0.1s;
+}
+
+.socialsIcon:hover{
+    opacity: 1;
+}
+
+@media screen and (max-width: 1400px){
+    .automotiveContainer::before{
+        transform: translate(-20px);
+    }
+}
+
+@media screen and (max-width: 772px){
+    .automotiveContainer{
+        height: auto;
+        flex-direction: column-reverse;
+        align-items: center;
+        margin-top: 0;
+    }
+
+    .imagesContainer{
+        width: 80%;
+        margin-top: 30px;
+        aspect-ratio: 1/1;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .automotiveContainer{
+        margin-top: 0;
+    }
+
+    .infoContainer{
+        width: 90%;
+    }
+
+    .imagesContainer{
+        width: 90%;
+    }
+
+    .automotiveContainer::before{
+        transform: translate(0, 0);
+    }
+}
+

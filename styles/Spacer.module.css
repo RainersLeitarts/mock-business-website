@@ -1,0 +1,37 @@
+.spacerContainer{
+    width: 100vw;
+    transform: translate(calc(-0.5 * calc(100vw - 1360px)), 5px);
+    margin: 0;
+    padding: 0;
+}
+
+.spacerContainer.reverse{
+    transform: translate(calc(-0.5 * calc(100vw - 1360px)), -5px);
+}
+
+.svg{
+    margin: 0;
+    padding: 0;
+}
+
+@media screen and (max-width: 1400px){
+    .spacerContainer{
+        transform: translate(-20px, 5px);
+    }
+
+    .spacerContainer.reverse{
+        transform: translate(-20px, -5px);
+    }
+    
+}
+
+@media screen and (max-width: 500px){
+    .spacerContainer{
+        transform: translate(-20px, 5px);
+    }
+
+    .spacerContainer.reverse{
+        transform: translate(-20px, 0);
+    }
+    
+}
